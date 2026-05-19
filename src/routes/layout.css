@@ -11,6 +11,7 @@
   --font-departure: "Departure Mono", sans-serif;
   --color-accent: #dcecff;
   --color-primary: #564991;
+  --color-secondary: #c589dc;
 }
 
 @layer base {
@@ -79,6 +80,10 @@
 
 @utility glow {
   text-shadow: rgba(206, 229, 255, 0.6) 0 0 10px;
+}
+
+@utility pixelated {
+  image-rendering: pixelated;
 }
 
 @keyframes grid-scroll {

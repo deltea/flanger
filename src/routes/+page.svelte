@@ -1,5 +1,9 @@
 <main class="bg-[#1e182a] h-full squircle rounded-[6rem] flex justify-center items-center text-lg relative overflow-hidden bg-grid">
+  <!-- background back layer -->
   <div class="size-full bg-grid-back absolute inset-0"></div>
+
+  <div class="w-full h-52 bg-[url(/dither-transition.png)] absolute bottom-0 left-0 bg-repeat-x bg-contain"></div>
+
   <div class="w-[30rem] text-xl">
     <p class="glow">Presenting...</p>
     <img src="/flanger.png" alt="Flanger Logo" class="glow-filter w-full">
@@ -7,7 +11,7 @@
   </div>
 
   <!-- orpheus flag -->
-   <a
+  <!-- <a
     href="https://hackclub.com"
     class="group -left-3 top-8 absolute"
   >
@@ -17,5 +21,5 @@
       class="group-hover:rotate-8 origin-[left_center] duration-75 glow-filter-pink"
       width="300"
     >
-  </a>
+  </a> -->
 </main>
