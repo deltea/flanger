@@ -13,10 +13,19 @@
         }),
       });
     });
+
+    animate("#cover", {
+      opacity: { from: 1, to: 0 },
+      duration: 600
+    })
   });
 </script>
 
-<main class="bg-bg h-full squircle rounded-[6rem] text-lg bg-grid overflow-y-auto">
+<div id="cover" class="fixed inset-0 bg-black z-50 pointer-events-none"></div>
+
+<main class="bg-bg h-full bg-grid squircle rounded-[6rem] text-lg overflow-y-auto">
+  <div class="fixed inset-0 -z20 bg-grid-back pointer-events-none"></div>
+
   <div class="flex flex-col justify-center items-center h-[calc(100vh-6rem)] relative">
     <!-- audio waveform thingy -->
     <div class="absolute top-6 w-full">
@@ -65,5 +74,15 @@
     Esse, deleniti quis nostrum quidem aut inventore commodi quas quos enim reiciendis. Atque ipsum autem hic libero architecto dignissimos tempora ad natus? Quae consectetur dolores id odio. Suscipit, reiciendis maiores.
     Harum esse est tempore eum nisi velit, saepe corporis culpa quod recusandae eaque accusantium cum consequatur dolor deleniti, illo possimus ipsum natus? Iusto iure illum soluta atque doloremque laboriosam vero.
   </section>
+
+  <div class="w-full h-52 bg-[url(/dither-transition-top.png)] bg-repeat-x bg-contain pixelated"></div>
+
+  <footer class="bg-black px-8 pb-8">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, unde! Est, dolorem quam. Explicabo, tempora! Voluptates incidunt nesciunt nobis perferendis rerum dolores illo veniam natus ad, quia, earum iusto similique.
+    Porro deserunt consequuntur tenetur aliquid voluptas laborum mollitia dolor, possimus eaque asperiores quisquam adipisci nisi iusto voluptate, eligendi eveniet facere quae, repellat est esse quo ipsam fuga illum. Consequuntur, quasi.
+    Laboriosam quidem officiis consequatur minima dolorum ad, neque illo tenetur vero iusto, rerum fugit perferendis dolore placeat. Aliquam distinctio itaque in odit? Commodi ducimus a eveniet esse? Deleniti, veritatis explicabo?
+    Minima molestias sit dicta ipsam dolor ab inventore ullam eaque rerum, mollitia obcaecati perspiciatis? Aspernatur repudiandae dignissimos aliquam inventore facere, tenetur ipsum dolorum at quas recusandae rem et nisi delectus!
+    Vel harum suscipit ipsa reprehenderit repudiandae nemo, sequi quae commodi ipsum eaque neque minus omnis, sunt natus quas, debitis eos iste cum iure sit temporibus consequuntur minima nisi! Necessitatibus, veniam.
+  </footer>
 </main>
 

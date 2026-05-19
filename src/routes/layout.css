@@ -67,10 +67,6 @@
   35% { opacity: 0.23604; }
 }
 
-@utility lens-distortion {
-  filter: url(#lens-distortion);
-}
-
 @utility squircle {
   corner-shape: squircle;
 }

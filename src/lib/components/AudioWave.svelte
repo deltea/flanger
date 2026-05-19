@@ -6,14 +6,17 @@
   const HEIGHT = 60;
 
   let path: SVGPolylineElement;
+  let followPath: SVGPolylineElement;
 
   onMount(() => {
-    utils.set(path, { points: generatePoints() });
-    // setInterval(() => {
-    //   animate(path, {
-    //     points: svg.createDrawable
-    //   });
-    // }, 1000);
+    utils.set(path, { points: generateFlatPoints() });
+    utils.set(followPath, { points: generatePoints() });
+    animate(path, {
+      points: svg.morphTo(followPath),
+      ease: "outCirc",
+      duration: 500,
+      loop: true
+    });
   });
 
   function generatePoints() {
@@ -28,10 +31,24 @@
     }
     return points;
   }
+
+  function generateFlatPoints() {
+    const steps = 60;
+    const height = 8;
+    let points = "";
+    for (let i = 0; i < steps + 1; i++) {
+      const isOdd = i % 2 === 0;
+      const x = i * (WIDTH / steps);
+      const y = HEIGHT / 2;
+      points += `${x},${y} `;
+    }
+    return points;
+  }
 </script>
 
 <svg viewBox="0 0 {WIDTH} {HEIGHT}">
   <g stroke-width="2" stroke="var(--color-secondary)" fill="none" fill-rule="evenodd">
     <polyline bind:this={path} />
+    <polyline bind:this={followPath} style="display: none;" />
   </g>
 </svg>
