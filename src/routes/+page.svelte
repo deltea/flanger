@@ -1,0 +1,21 @@
+<main class="bg-[#1e182a] h-full squircle rounded-[6rem] flex justify-center items-center text-lg relative overflow-hidden bg-grid">
+  <div class="size-full bg-grid-back absolute inset-0"></div>
+  <div class="w-[30rem] text-xl">
+    <p class="glow">Presenting...</p>
+    <img src="/flanger.png" alt="Flanger Logo" class="glow-filter w-full">
+    <p class="float-right glow">by <span class="underline decoration-2">Hack Club</span></p>
+  </div>
+
+  <!-- orpheus flag -->
+   <a
+    href="https://hackclub.com"
+    class="group -left-3 top-8 absolute"
+  >
+    <img
+      src="/hack-club.png"
+      alt="Hack Club Flag"
+      class="group-hover:rotate-8 origin-[left_center] duration-75 glow-filter-pink"
+      width="300"
+    >
+  </a>
+</main>

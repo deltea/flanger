@@ -1,1 +1,103 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Departure Mono";
+  src: url("/fonts/DepartureMono.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --font-departure: "Departure Mono", sans-serif;
+  --color-accent: #dcecff;
+  --color-primary: #564991;
+}
+
+@layer base {
+  body {
+    @apply text-base text-white font-departure underline-offset-2;
+  }
+}
+
+@utility crt {
+  &::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 0.27861; }
+  5% { opacity: 0.34769; }
+  10% { opacity: 0.23604; }
+  15% { opacity: 0.10626; }
+  20% { opacity: 0.18128; }
+  25% { opacity: 0.10626; }
+  30% { opacity: 0.18128; }
+  35% { opacity: 0.23604; }
+}
+
+@utility lens-distortion {
+  filter: url(#lens-distortion);
+}
+
+@utility squircle {
+  corner-shape: squircle;
+}
+
+@utility glow-filter {
+  filter: drop-shadow(0 0 16px rgba(206, 229, 255, 0.6));
+}
+
+@utility glow-filter-pink {
+  filter: drop-shadow(0 0 16px rgba(236, 55, 80, 0.8));
+}
+
+@utility glow {
+  text-shadow: rgba(206, 229, 255, 0.6) 0 0 10px;
+}
+
+@keyframes grid-scroll {
+  from { background-position: 0px 0px; }
+  to { background-position: 100px 100px; }
+}
+
+@utility bg-grid {
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(to right, rgba(86, 73, 145, 0.35) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(86, 73, 145, 0.35) 2px, transparent 2px);
+  animation: grid-scroll 8s linear infinite;
+}
+
+@utility bg-grid-back {
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(to right, rgba(86, 73, 145, 0.15) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(86, 73, 145, 0.15) 2px, transparent 2px);
+  animation: grid-scroll 8s linear infinite reverse;
+}
