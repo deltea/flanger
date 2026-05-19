@@ -8,14 +8,6 @@
 	<title>Flanger ⋅ Hack Club</title>
 </head>
 
-<div class="h-screen bg-black p-12 crt lens-distortion relative">
+<div class="h-screen bg-black p-12 crt lens-distortion relative overflow-hidden">
 	{@render children()}
-
-	<!-- lens distortion -->
-	<!-- <svg style="display: none;">
-		<filter id="lens-distortion">
-			<feImage href="distort-map.png" result="map" />
-			<feDisplacementMap in="SourceGraphic" in2="map" scale="50" xChannelSelector="R" yChannelSelector="G" />
-		</filter>
-	</svg> -->
 </div>

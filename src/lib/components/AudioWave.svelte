@@ -1,85 +1,37 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { animate, svg, utils } from "animejs";
 
-  let audioCtx: AudioContext;
-  let analyser: AnalyserNode;
-  let audioElement: HTMLAudioElement;
-  let dataArray: Uint8Array<ArrayBuffer>;
-  let bufferLength: number;
+  const WIDTH = 1000;
+  const HEIGHT = 60;
 
-  let canvas: HTMLCanvasElement;
-  let ctx: CanvasRenderingContext2D;
+  let path: SVGPolylineElement;
 
   onMount(() => {
-    audioCtx = new AudioContext();
-    analyser = audioCtx.createAnalyser();
-
-    const source = audioCtx.createMediaElementSource(audioElement);
-    source.connect(analyser);
-    analyser.connect(audioCtx.destination);
-
-    analyser.fftSize = 512;
-    bufferLength = analyser.frequencyBinCount;
-    dataArray = new Uint8Array(bufferLength);
-
-    ctx = canvas.getContext("2d")!;
-
-    audioElement.onplay = () => {
-      if (audioCtx.state === "suspended") audioCtx.resume();
-    };
-
-    // draw();
-    setInterval(() => {
-      draw();
-    }, 100);
+    utils.set(path, { points: generatePoints() });
+    // setInterval(() => {
+    //   animate(path, {
+    //     points: svg.createDrawable
+    //   });
+    // }, 1000);
   });
 
-  function draw() {
-    // requestAnimationFrame(draw);
-
-    analyser.getByteTimeDomainData(dataArray);
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = "#c589dc";
-    ctx.beginPath();
-
-    const WIDTH = 1000;
-    const HEIGHT = 50;
-
-    const sliceWidth = WIDTH / bufferLength;
-    let x = 0;
-    let offset = 0;
-    for (let i = 0; i < bufferLength; i++) {
-      const v = dataArray[i] / 600.0;
-      let y = ((v + 1) ** 1.5 - 1) * (HEIGHT / 2);
-
-      if (i === 0) {
-        ctx.moveTo(x, HEIGHT / 2);
-        offset = HEIGHT / 2 - y;
-      } else {
-        ctx.lineTo(x, y + offset);
-      }
-
-      x += sliceWidth;
+  function generatePoints() {
+    const steps = 60;
+    const height = 8;
+    let points = "";
+    for (let i = 0; i < steps + 1; i++) {
+      const isOdd = i % 2 === 0;
+      const x = i * (WIDTH / steps);
+      const y = isOdd ? (HEIGHT / 2 - height) : (HEIGHT / 2 + height);
+      points += `${x},${y} `;
     }
-
-    ctx.lineTo(WIDTH, HEIGHT / 2);
-    ctx.stroke();
+    return points;
   }
 </script>
 
-<canvas
-  bind:this={canvas}
-  class="w-full pixelated"
-  width="1000"
-  height="50"
-></canvas>
-
-<audio
-  bind:this={audioElement}
-  src="/music.mp3"
-  autoplay
-  class="hidden"
-></audio>
+<svg viewBox="0 0 {WIDTH} {HEIGHT}">
+  <g stroke-width="2" stroke="var(--color-secondary)" fill="none" fill-rule="evenodd">
+    <polyline bind:this={path} />
+  </g>
+</svg>

@@ -9,6 +9,7 @@
 
 @theme {
   --font-departure: "Departure Mono", sans-serif;
+  --color-bg: #1e182a;
   --color-accent: #dcecff;
   --color-primary: #564991;
   --color-secondary: #c589dc;
@@ -16,7 +17,11 @@
 
 @layer base {
   body {
-    @apply text-base text-white font-departure underline-offset-2;
+    @apply text-base text-white bg-black font-departure underline-offset-2 selection:bg-primary;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -71,7 +76,7 @@
 }
 
 @utility glow-filter {
-  filter: drop-shadow(0 0 16px rgba(206, 229, 255, 0.6));
+  filter: drop-shadow(0 0 16px rgba(206, 229, 255, 0.8));
 }
 
 @utility glow-filter-pink {
