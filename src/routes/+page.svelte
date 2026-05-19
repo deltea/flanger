@@ -41,7 +41,7 @@
       </p>
     </div>
 
-    <div class="w-full h-52 bg-[url(/dither-transition-top.png)] bg-repeat-x bg-contain pixelated absolute bottom-0 left-0"></div>
+    <div class="w-full h-48 bg-[url(/dither-transition-top.png)] bg-repeat-x bg-contain pixelated absolute bottom-0 left-0"></div>
   </div>
 
   <!-- orpheus flag -->
@@ -65,7 +65,7 @@
     Harum esse est tempore eum nisi velit, saepe corporis culpa quod recusandae eaque accusantium cum consequatur dolor deleniti, illo possimus ipsum natus? Iusto iure illum soluta atque doloremque laboriosam vero.
   </section>
 
-  <div class="w-full h-52 bg-[url(/dither-transition-bottom.png)] bg-repeat-x bg-contain pixelated"></div>
+  <div class="w-full h-48 bg-[url(/dither-transition-bottom.png)] bg-repeat-x bg-contain pixelated"></div>
 
   <section class="h-screen px-8">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni saepe neque eum velit. Voluptatum consectetur neque nihil assumenda necessitatibus porro praesentium error magni. Eligendi a autem ducimus. Maiores, suscipit magnam.
@@ -75,7 +75,7 @@
     Harum esse est tempore eum nisi velit, saepe corporis culpa quod recusandae eaque accusantium cum consequatur dolor deleniti, illo possimus ipsum natus? Iusto iure illum soluta atque doloremque laboriosam vero.
   </section>
 
-  <div class="w-full h-52 bg-[url(/dither-transition-top.png)] bg-repeat-x bg-contain pixelated"></div>
+  <div class="w-full h-48 bg-[url(/dither-transition-top.png)] bg-repeat-x bg-contain pixelated"></div>
 
   <footer class="bg-black px-8 pb-8">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, unde! Est, dolorem quam. Explicabo, tempora! Voluptates incidunt nesciunt nobis perferendis rerum dolores illo veniam natus ad, quia, earum iusto similique.

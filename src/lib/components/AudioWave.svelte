@@ -9,8 +9,8 @@
   let followPath: SVGPolylineElement;
 
   onMount(() => {
-    utils.set(path, { points: generateFlatPoints() });
-    utils.set(followPath, { points: generatePoints() });
+    utils.set(path, { points: generatePoints() });
+    utils.set(followPath, { points: generateFlatPoints() });
     animate(path, {
       points: svg.morphTo(followPath),
       ease: "outCirc",
