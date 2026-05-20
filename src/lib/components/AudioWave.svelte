@@ -47,7 +47,7 @@
 </script>
 
 <svg viewBox="0 0 {WIDTH} {HEIGHT}">
-  <g stroke-width="2" stroke="var(--color-secondary)" fill="none" fill-rule="evenodd">
+  <g stroke-width="2" stroke="var(--color-secondary)" fill="none" fill-rule="evenodd" class="glow-filter-secondary">
     <polyline bind:this={path} />
     <polyline bind:this={followPath} style="display: none;" />
   </g>
