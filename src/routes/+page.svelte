@@ -2,7 +2,7 @@
   import { animate, scrambleText, utils } from "animejs";
   import AudioWave from "$lib/components/AudioWave.svelte";
   import { onMount } from "svelte";
-    import Separator from "$lib/components/Separator.svelte";
+  import Separator from "$lib/components/Separator.svelte";
 
   onMount(() => {
     utils.$("#scramble").forEach(text => {
@@ -27,13 +27,13 @@
 <main class="bg-bg h-full bg-grid squircle rounded-[6rem] xl:text-lg text-base overflow-y-auto">
   <div class="fixed inset-0 bg-grid-back pointer-events-none"></div>
 
-  <div class="flex flex-col justify-center items-center xl:h-[calc(100vh-6rem)] h-[calc(100vh-2rem)] relative px-8">
+  <div class="flex flex-col justify-center items-center lg:h-[calc(100vh-6rem)] h-[calc(100vh-2rem)] relative px-8">
     <!-- audio waveform thingy -->
     <div class="absolute top-4 w-full">
       <AudioWave />
     </div>
 
-    <div class="w[30rem] w-2/5 text-xl mt-8 mb-20">
+    <div class="w[30rem] lg:w-2/5 w-4/5 text-xl mt-8 mb-20">
       <p id="scramble" class="glow">Presenting...</p>
       <img src="/images/flanger.png" alt="Flanger Logo" class="glow-filter w-full">
       <p class="float-right glow">
@@ -42,7 +42,7 @@
       </p>
     </div>
 
-    <div class="bg-primary text-white px-2.5 glow-filtersecondary mb-16">
+    <div class="bg-primary text-white px-2.5 glow-filter-primary mb-16">
       <p>Ship a music related project, and get a DAW for free!</p>
     </div>
 
@@ -58,6 +58,7 @@
     </div> -->
 
     <div class="w-full h-48 bg-[url(/images/dither-transition-top.png)] bg-repeat-x bg-contain pixelated absolute bottom-0 left-0 z-10"></div>
+
     <iconify-icon icon="mdi:arrow-down" class="absolute bottom-4 left-1/2 -translate-x-1/2"></iconify-icon>
   </div>
 
