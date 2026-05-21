@@ -3,6 +3,7 @@
   import AudioWave from "$lib/components/AudioWave.svelte";
   import { onMount } from "svelte";
   import Separator from "$lib/components/Separator.svelte";
+  import "iconify-icon";
 
   onMount(() => {
     utils.$("#scramble").forEach(text => {
@@ -58,8 +59,6 @@
     </div> -->
 
     <div class="w-full h-48 bg-[url(/images/dither-transition-top.png)] bg-repeat-x bg-contain pixelated absolute bottom-0 left-0 z-10"></div>
-
-    <iconify-icon icon="mdi:arrow-down" class="absolute bottom-4 left-1/2 -translate-x-1/2"></iconify-icon>
   </div>
 
   <!-- orpheus flag -->
