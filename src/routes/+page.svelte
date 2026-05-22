@@ -23,7 +23,9 @@
   });
 </script>
 
-<div id="cover" class="fixed inset-0 bg-black z-50 pointer-events-none"></div>
+<div id="cover" class="fixed inset-0 bg-black z-50 pointer-events-none flex justify-center items-center text-primary">
+  LOADING...
+</div>
 
 <main class="bg-bg h-full bg-grid squircle rounded-[6rem] xl:text-lg text-base overflow-y-auto">
   <div class="fixed inset-0 bg-grid-back pointer-events-none"></div>
@@ -35,16 +37,21 @@
     </div>
 
     <div class="w[30rem] lg:w-2/5 w-4/5 text-xl mt-8 mb-20">
-      <p id="scramble" class="glow">Presenting...</p>
+      <p class="glow">
+        <span>░▒▓█</span>
+        <span id="scramble">Presenting...</span>
+      </p>
       <img src="/images/flanger.png" alt="Flanger Logo" class="glow-filter w-full">
       <p class="float-right glow">
-        <span id="scramble">by</span>
-        <span id="scramble" class="underline decoration-2">Hack Club</span>
+        <span id="scramble">by Hack Club</span>
+        <span>█▓▒░</span>
       </p>
     </div>
 
-    <div class="bg-primary text-white px-2.5 glow-filter-primary mb-16">
-      <p>Ship a music related project, and get a DAW for free!</p>
+    <div class="flex gap-[2px] text-white px-2.5 glow-filter-primary mb-16">
+      <span class="text-primary h-full scale-[122%]">▞▞</span>
+      <p class="bg-primary px-2">Ship a music related project, and get a DAW for free!</p>
+      <span class="text-primary h-full scale-[122%]">▚▚</span>
     </div>
 
     <!-- <div class="flex gap-2">
