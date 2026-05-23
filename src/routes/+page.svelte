@@ -49,9 +49,9 @@
     </div>
 
     <div class="flex gap-[2px] text-white px-2.5 glow-filter-primary mb-16">
-      <span class="text-primary h-full scale-[122%]">▞▞</span>
+      <span class="text-primary h-full scale-[115%]">▞▞</span>
       <p class="bg-primary px-2">Ship a music related project, and get a DAW for free!</p>
-      <span class="text-primary h-full scale-[122%]">▚▚</span>
+      <span class="text-primary h-full scale-[115%]">▚▚</span>
     </div>
 
     <!-- <div class="flex gap-2">
